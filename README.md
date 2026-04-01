@@ -24,7 +24,7 @@ A cinematic login experience — particles, blur, mountains.
 
 🚀 Getting Started
 No build tools needed. Just open it:
-bashgit clone https://github.com/your-username/your-repo.git
+bashgit clone https://github.com/Davidev3/your-repo.git
 cd your-repo
 # Open siteteste.html in your browser
 Or drag siteteste.html straight into your browser. Done.
