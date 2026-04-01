@@ -22,13 +22,6 @@ A cinematic login experience — particles, blur, mountains.
 ├── darkmode.js          # Particle animation + form validation + popup
 └── 648b8692-...png      # Background image (mountain/forest scene)
 
-🚀 Getting Started
-No build tools needed. Just open it:
-bashgit clone https://github.com/Davidev3/your-repo.git
-cd your-repo
-# Open siteteste.html in your browser
-Or drag siteteste.html straight into your browser. Done.
-
 🧠 What I Learned / Used
 ConceptWhereCanvas API & requestAnimationFrameParticle animation loopbackdrop-filter: blur()Glassmorphism cardCSS @keyframesFade-in on page loadDOM manipulationPopup show/hide logice.preventDefault()Form submission control
 
