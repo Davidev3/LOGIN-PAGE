@@ -1,0 +1,246 @@
+body{
+  background-image: url(648b8692-dd10-43c7-a350-62c119773d33.png);
+  background-size: cover;
+  background-attachment: fixed;
+  display: flex;
+  justify-content: center; 
+  align-items: center; 
+  min-height: 100vh; 
+  margin: 0;
+  transition: all 0.3s ease;
+  opacity: 0;
+  animation: fadeIn 0.5s ease forwards;
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+  }
+}
+
+.login-form {
+  font-family: "Inter", sans-serif;
+  border: 2px solid rgba(255, 255, 255, 0.3); 
+  border-radius: 10px; 
+  padding: 30px;
+  background-color: transparent;
+  backdrop-filter: blur(60px);
+  box-shadow: 0 4px 6px rgba(255, 255, 255, 0.3); 
+  max-width: 400px;
+  text-align: center; 
+}
+
+.login-form input {
+  display: block;
+  margin: 10px auto; 
+  width: 100%;
+  max-width: 300px;
+}
+
+.login-form button {
+  display: block;
+  margin: 20px auto 0; 
+}
+
+
+.remember-forgot-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  max-width: 300px;
+  margin: 15px auto;
+}
+
+.checkbox-container {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.checkbox-container input[type="checkbox"] {
+  width: 14px;
+  height: 14px;
+  cursor: pointer;
+  margin: 0;
+}
+
+.checkbox-container label {
+  margin: 0;
+  font-weight: normal;
+  cursor: pointer;
+  font-size: 12px;
+}
+
+.forgot-password {
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 12px;
+}
+
+.forgot-password:hover {
+  text-decoration: underline;
+}
+
+.btn{
+  border-radius: 50px;
+  color: rgb(0, 0, 0);
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+  width: 300px;
+  height: 40px;
+  border: none;
+  cursor: pointer;
+  font-family: "Inter", sans-serif;
+  font-weight: bold;
+}
+
+.btn:hover {
+  background-color: #f0f0f0;
+}
+
+.login-form input[type="text"],
+.login-form input[type="password"] {
+  display: block;
+  margin: 10px auto;
+  width: 100%;
+  max-width: 250px;
+  padding: 12px 15px; 
+  border: 2px solid rgba(255, 255, 255, 0.5); 
+  border-radius: 25px; 
+  background-color: rgba(255, 255, 255, 0.3); 
+  color: #000000; 
+  font-size: 16px;
+  font-family: "Inter", sans-serif;
+  outline: none; 
+  transition: all 0.3s ease; 
+}
+
+.login-form input[type="text"]:focus,
+.login-form input[type="password"]:focus {
+  background-color: rgba(255, 255, 255, 0.5);
+  border-color: rgba(255, 255, 255, 0.8);
+  transform: scale(1.00); 
+}
+
+
+.login-form input::placeholder {
+  color: rgba(0, 0, 0, 0.5);
+  font-style: italic;
+}
+
+.login-form h1{
+  color: white;
+}
+
+.login-form label{
+  color: white;
+}
+
+.login-form input::placeholder {
+  color: rgba(255, 255, 255, 0.5);           
+  font-style: "Inter", sans-serif;                   
+  font-size: 14px;                      
+  font-weight: 300;
+  opacity: 0.7;                
+  text-transform: lowercase;            
+  letter-spacing: 0.5px;                 
+}
+
+.input-wrapper {
+  position: relative;
+  width: 100%;
+  max-width: 300px;
+  margin: 10px auto;
+}
+.input-wrapper svg {
+  position: absolute;
+  right: 15px;  
+  top: 50%;
+  transform: translateY(-50%);
+  width: 20px;
+  height: 20px;
+  fill: rgba(255, 255, 255, 0.7);
+  pointer-events: none;
+}
+.input-wrapper input {
+  width: 100%;
+  padding: 12px 45px 12px 15px; 
+  border: 2px solid rgba(255, 255, 255, 0.5);
+  border-radius: 25px;
+  background-color: rgba(255, 255, 255, 0.3);
+  color: #000000;
+  font-size: 16px;
+  font-family: "Inter", sans-serif;
+  outline: none;
+  transition: all 0.3s ease;
+  box-sizing: border-box;
+}
+
+.input-wrapper input:focus + svg {
+  fill: rgba(255, 255, 255, 1);
+}
+
+.input-wrapper {
+  position: relative;
+  width: 100%;
+  max-width: 300px;
+  margin: 10px auto;
+  display: flex;
+  align-items: center;
+}
+
+
+.input-wrapper svg {
+  position: absolute;
+  right: 35px;  
+  top: 50%;
+  transform: translateY(-50%);
+  width: 18px;  
+  height: 18px;
+  fill: rgba(255, 255, 255, 0.8);  
+  pointer-events: none;
+  z-index: 1;  
+}
+
+.input-wrapper input {
+  width: 100%;
+  padding: 12px 45px 12px 15px;
+  border: 2px solid rgba(255, 255, 255, 0.5);
+  border-radius: 25px;
+  background-color: rgba(255, 255, 255, 0.3);
+  color: #000000;
+  font-size: 16px;
+  font-family: "Inter", sans-serif;
+  outline: none;
+  transition: all 0.3s ease;
+  box-sizing: border-box;  
+  position: relative;
+}
+
+.register{
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 12px;
+}
+
+p{
+  font-family: "Inter", sans-serif;
+  color: white;
+
+}
+
+.register{
+    font-family: "Inter", sans-serif;
+    color: white;
+    text-decoration: none;
+    transition: text-decoration 0.3s ease;
+    font-size: 16px;
+}
+
+.register:hover{
+  text-decoration: underline;
+}
