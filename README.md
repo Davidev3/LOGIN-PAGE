@@ -43,7 +43,7 @@ glassmorphism-login/
 No build step, no dependencies. Just open it:
 
 ```bash
-git clone https://github.com/your-username/glassmorphism-login.git
+git clone https://github.com/Davidev3/glassmorphism-login.git
 cd glassmorphism-login
 
 # Open directly in your browser
@@ -83,7 +83,7 @@ The background is a **purple mountain twilight scene**, chosen to contrast with 
 
 <div align="center">
 
-Made with 💜 by [@ByStopa](https://github.com/your-username)
+Made with by [@Davidev3](https://github.com/your-username)
 
 *No frameworks. No dependencies. Just the web.*
 
