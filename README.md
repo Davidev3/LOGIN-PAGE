@@ -3,10 +3,6 @@
 
 A cinematic login experience — particles, blur, mountains.
 
-Mostrar Imagem
-Mostrar Imagem
-Mostrar Imagem
-Mostrar Imagem
 </div>
 
 ✨ Features
