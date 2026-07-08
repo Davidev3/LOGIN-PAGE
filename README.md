@@ -25,19 +25,6 @@
 
 ---
 
-## 📁 Project Structure
-
-```
-glassmorphism-login/
-├── siteteste.html      # Main HTML structure
-├── siteteste.css       # Styles & glassmorphism effects
-├── darkmode.js         # Particle animation + form validation + popup
-├── siteteste.js        # Reserved for future logic
-└── background.png      # Mountain/forest background scene
-```
-
----
-
 ## 🚀 Quick Start
 
 No build step, no dependencies. Just open it:
@@ -50,7 +37,7 @@ cd glassmorphism-login
 open siteteste.html
 ```
 
-Or just drag `siteteste.html` into your browser.
+Or just drag `LoginPage.html` into your browser.
 
 ---
 
