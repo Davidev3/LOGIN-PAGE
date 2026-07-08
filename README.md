@@ -11,7 +11,7 @@
 
 ## 📸 Preview
 
-![Preview](648b8692-dd10-43c7-a350-62c119773d33.png)
+![Preview](backgroundImage.png)
 
 ---
 
