@@ -1,23 +1,23 @@
 # Glassmorphism Login UI
 
-Estudo de interface de login com HTML, CSS e JavaScript puro. Inclui fundo ilustrado, partículas em Canvas, formulário com validação nativa do navegador e mensagens de demonstração.
+A frontend study built with HTML, CSS, and vanilla JavaScript. It includes a responsive glassmorphism form, Canvas particles, browser form validation, and demo feedback messages.
 
-> Projeto apenas de frontend. O botão não autentica usuários nem envia credenciais a um servidor.
+> Demo only: there is no authentication backend. The page does not send or store credentials. Do not enter a real password.
 
-## Executar
+## Run locally
 
 ```bash
 git clone https://github.com/Davidev3/LOGIN-PAGE.git
 cd LOGIN-PAGE
 ```
 
-Abra `LoginPage.html` no navegador. Não há instalação de dependências.
+Open `index.html` in a browser. No build step or dependencies are required.
 
-## Estrutura
+## Files
 
-- `LoginPage.html`: formulário e elementos da interface.
-- `css/Login.css`: estilos responsivos e fundo.
-- `js/grayscale-mode.js`: mensagens e partículas em Canvas.
-- `assets/backgroundImage.png`: imagem de fundo.
-
-O nome `grayscale-mode.js` é histórico; o arquivo controla as partículas e as mensagens, não um modo em escala de cinza.
+```text
+index.html                 Page structure and form
+css/style.css              Responsive styling
+js/main.js                 UI feedback and Canvas particles
+assets/backgroundImage.png Background image
+```
