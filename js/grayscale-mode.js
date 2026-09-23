@@ -1,68 +1,59 @@
-
 const form = document.getElementById("login-form");
 const popup = document.getElementById("popup");
 const popupMsg = document.getElementById("popup-msg");
 const popupClose = document.getElementById("popup-close");
+let popupTimer;
 
-form.addEventListener("submit", (e) => {
-  e.preventDefault();
-
-  const email = form.email.value.trim();
-  const senha = form.senha.value.trim();
-
-  if(email === "" || senha === "") {
-    showPopup("Preencha todos os campos!", false);
-    return;
-  }
-
-  
-  showPopup("Login realizado com sucesso!", true);
+form.addEventListener("submit", (event) => {
+  event.preventDefault();
+  if (!form.reportValidity()) return;
+  showPopup("Demo only — no authentication was performed.", true);
 });
 
-popupClose.addEventListener("click", () => {
-  popup.classList.remove("show");
+document.querySelectorAll("[data-demo-link]").forEach((link) => {
+  link.addEventListener("click", (event) => {
+    event.preventDefault();
+    showPopup("This feature is not available in the demo.", false);
+  });
 });
+
+popupClose.addEventListener("click", () => popup.classList.remove("show"));
 
 function showPopup(message, success) {
+  clearTimeout(popupTimer);
   popupMsg.textContent = message;
-  popup.style.color = success ? "#0f0" : "#f33";
+  popup.classList.toggle("success", success);
   popup.classList.add("show");
-
-  setTimeout(() => {
-    popup.classList.remove("show");
-  }, 2500);
+  popupTimer = setTimeout(() => popup.classList.remove("show"), 2500);
 }
 
 const canvas = document.getElementById("particles");
 const ctx = canvas.getContext("2d");
-canvas.width = window.innerWidth;
-canvas.height = window.innerHeight;
+const particles = Array.from({ length: 100 }, () => ({
+  x: Math.random() * innerWidth,
+  y: Math.random() * innerHeight,
+  r: Math.random() * 2 + 1,
+  dx: Math.random() * 0.5 - 0.25,
+  dy: Math.random() * 0.5 - 0.25,
+}));
 
-const particles = [];
-for(let i=0;i<100;i++){
-  particles.push({
-    x: Math.random()*canvas.width,
-    y: Math.random()*canvas.height,
-    r: Math.random()*2+1,
-    dx: Math.random()*0.5-0.25,
-    dy: Math.random()*0.5-0.25
-  });
+function resizeCanvas() {
+  canvas.width = innerWidth;
+  canvas.height = innerHeight;
 }
+window.addEventListener("resize", resizeCanvas);
+resizeCanvas();
 
-function animateParticles(){
-  ctx.clearRect(0,0,canvas.width,canvas.height);
-  for(let p of particles){
+function animateParticles() {
+  ctx.clearRect(0, 0, canvas.width, canvas.height);
+  for (const p of particles) {
     ctx.beginPath();
-    ctx.arc(p.x,p.y,p.r,0,Math.PI*2);
-    ctx.fillStyle = 'rgba(30,144,255,0.6)';
+    ctx.arc(p.x, p.y, p.r, 0, Math.PI * 2);
+    ctx.fillStyle = "rgba(30,144,255,0.6)";
     ctx.fill();
-    p.x += p.dx;
-    p.y += p.dy;
-    if(p.x>canvas.width) p.x=0;
-    if(p.x<0) p.x=canvas.width;
-    if(p.y>canvas.height) p.y=0;
-    if(p.y<0) p.y=canvas.height;
+    p.x = (p.x + p.dx + canvas.width) % canvas.width;
+    p.y = (p.y + p.dy + canvas.height) % canvas.height;
   }
   requestAnimationFrame(animateParticles);
 }
-animateParticles();
+if (!matchMedia("(prefers-reduced-motion: reduce)").matches) animateParticles();
