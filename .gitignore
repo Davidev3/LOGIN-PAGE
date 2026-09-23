@@ -1,0 +1,9 @@
+# Local configuration and secrets
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+.vscode/
+.DS_Store
+node_modules/
